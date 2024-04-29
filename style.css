@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+  background-color: rgb(0, 0, 0);
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+canvas#Matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    width: 100vw;
+    height: 100vh;
+    color: #1d5b756c
+}
+
+@font-face {
+    font-family: 'Monocode'; 
+    src: url('Monocode-Regular-V01.02b.ttf') format('truetype');
+  }
+
+  .techy-wires{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 0;
+  }
+
+  .login-button {
+    font-family: 'Monocode';
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(217, 217, 217, 0); 
+    background-image: linear-gradient(to bottom, rgba(217, 217, 217, 0.5) 20%, rgba(115, 115, 115, 0.5) 80%);
+}
+
+
+.nav-item a{
+    font-family: 'Monocode';
+    color: white !important;
+}
+
+.nav-item a:hover{
+    text-decoration: underline solid #43ffbf;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.3em;
+}
+
+.nav-item{
+    margin: 0px 10px;
+}
+
+.hero-container img{
+    width: 750px;
+    margin: 100px 0px 50px 0px;
+    z-index: 2;
+}
+
+.hishotlogo-wrapper{
+  z-index: 5;
+}
+
+.login-button-container{
+  padding-right: 20px !important;
+ 
+
+}
+
+.navbar-items-container{
+  padding-left: 20px !important;
+}
+
+.hero-container {
+    position: relative; 
+    margin-top: 100px;
+    border: solid 2px #43ffbf;
+    border-radius: 15px;
+    width: 90% !important;
+    overflow: hidden; 
+    box-shadow: 0 0 5px #43ffbf, 0 0 10px #43ffbf, 0 0 20px #43ffbf;
+}
+
+.inner-wrapper {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 180px;
+    perspective-origin: 50% 40%;
+    z-index: -1;
+}
+
+.landscape {
+    position: absolute; 
+    width: 200%;
+    left: -50%;
+    height: 180%;
+    bottom: -30%;
+    background-image: -webkit-linear-gradient(top, #35ff57 2px,transparent 2px), -webkit-linear-gradient(left, #3fe67c 2px, transparent 2px);
+    background-size: 50px 50px, 80px 80px;
+    background-position: -1px -1px, -1px -1px;
+    transform: rotateX(20deg);
+    animation: moveUp 1s infinite linear;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgba(97, 255, 105, 0) 0%, rgba(1, 41, 51, 0.781) 100%);
+      pointer-events: none; 
+  }
+}
+
+
+
+  @keyframes moveUp{
+    0% {
+      background-position: -50px -50px, -1px -1px;
+    }
+    100% {
+      background-position: -1px -1px, -1px -1px;
+    }
+  }
+
+  .button-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .hero-button {
+    display: block;
+    width: 260px; 
+    height: 85px; 
+    padding-bottom: 10px;
+    background-color: transparent; 
+    color: #fff; 
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0px 20px 100px 20px;
+    z-index: 1;
+    font-size: 18px;
+    background-image: url(button\ frame.png);
+    background-size: cover;
+  }
+
+  .navbar-toggler{
+    z-index: 2;
+    border: none;
+  }
+
+  .login-button-container{
+    justify-content: end;
+  }
+
+  .custom-toggler .navbar-toggler-icon {
+    margin: 0 !important;
+    padding-top: 0px !important;
+    border: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(231, 231, 231, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+  .navbar-brand{
+    padding-left: 20px !important;
+  }
+
+  .navbar-container{
+    padding-right: 60px !important;
+    padding-left: 60px !important;
+  }
+  
+  @media only screen and (max-width: 900px) {
+
+    .nav-item a{
+      text-align: center;
+  }
+
+    .navbar-container{
+        padding: 0 !important;
+    }
+
+    .navbar-brand{
+      padding-left: 0 !important;
+    }
+
+    .login-button-container{
+      display: flex;
+      padding-right: 0 !important;
+      margin: 0 !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar-items-container{
+      padding-left: 0 !important;
+    }
+
+    .hero-button-container{
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    
+    .navbar-nav li{
+
+      font-size: 18px;
+      padding: 10px;
+  }
+
+  .techy-wires{
+    width: 75px;
+  }
+}
+
