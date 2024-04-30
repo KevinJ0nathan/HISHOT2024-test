@@ -205,6 +205,7 @@ canvas#Matrix {
   .about-us-video-container{
     display: flex;
     justify-content: center;
+    overflow-x: hidden
   }
 
   .about-us-video-container iframe{
@@ -254,6 +255,7 @@ canvas#Matrix {
     .about-us-video-container{
       overflow-x: hidden
     }
+
 
     .navbar-brand{
       width: 20%;
