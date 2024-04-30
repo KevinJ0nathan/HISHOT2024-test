@@ -219,6 +219,10 @@ canvas#Matrix {
       padding: 10px;
     }
 
+       .navbar-brand{
+      width: 20%;
+    }
+
     
     .navbar-nav li{
 
