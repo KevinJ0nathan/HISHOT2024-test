@@ -45,6 +45,13 @@ canvas#Matrix {
     background-image: linear-gradient(to bottom, rgba(217, 217, 217, 0.5) 20%, rgba(115, 115, 115, 0.5) 80%);
 }
 
+#navbar{
+  transition: ease-in 0.5s;
+}
+
+#navbar.collapsed-menu{
+  background-color: black;
+}
 
 .nav-item a{
     font-family: 'Monocode';
@@ -83,7 +90,7 @@ canvas#Matrix {
 
 .hero-container {
     position: relative; 
-    margin-top: 100px;
+    margin-top: 200px;
     border: solid 2px #43ffbf;
     border-radius: 15px;
     width: 90% !important;
@@ -125,8 +132,6 @@ canvas#Matrix {
       pointer-events: none; 
   }
 }
-
-
 
   @keyframes moveUp{
     0% {
@@ -218,6 +223,8 @@ canvas#Matrix {
   width: 250px;
   height: 100px;
  }
+
+ 
 
 
   @media only screen and (max-width: 900px) {

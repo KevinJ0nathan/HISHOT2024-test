@@ -12,16 +12,18 @@
     <link rel="icon" type="image/x-icon" href="Navbar Logo.png">
 </head>
 <body>
+    <!--Matrix rain-->
     <canvas id="Matrix"></canvas>
     <script src="./index.js"></script>
+    <!--Matrix rain end-->
      <!--Navbar start-->
-     <nav class="navbar navbar-expand-sm">
+     <nav class="navbar navbar-expand-sm fixed-top" id="navbar">
         <div class="container-fluid navbar-container">
             <img src="Techy wires top right corner.png" class="techy-wires">
             <a class="navbar-brand" href="index.html">
                 <img src="Navbar Logo.png" alt="Logo" class="rounded-pill Logo img-fluid">
             </a>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <button class="navbar-toggler custom-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -83,5 +85,8 @@
         </div>
     </div>
     <!--About HISHOT End-->
+
+    <script src="navbar.js"></script>
+    
 </body>
 </html>
