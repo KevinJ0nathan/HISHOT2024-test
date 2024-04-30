@@ -20,7 +20,6 @@ canvas#Matrix {
     z-index: -1; 
     width: 100vw;
     height: 100vh;
-    color: #1d5b756c
 }
 
 @font-face {
@@ -33,6 +32,7 @@ canvas#Matrix {
     right: 0px;
     top: 0px;
     padding: 0;
+    pointer-events: none;
   }
 
   .login-button {
@@ -186,7 +186,39 @@ canvas#Matrix {
     padding-right: 60px !important;
     padding-left: 60px !important;
   }
-  
+
+  .about-us-container{
+    padding-top: 100px;
+  }
+
+  .about-us-header{
+    color: #D0E0E6;
+  }
+
+  .about-us-content{
+    font-size: 16px;
+    font-family: 'Monocode';
+    color: #D0E0E6;
+    padding: 70px 10%;
+  }
+
+  .about-us-video-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-us-video-container iframe{
+    border: 2px solid #D0E0E6;
+    border-radius: 10px;
+    margin: 15px;
+  }
+
+ .leftArrow, .rightArrow{
+  width: 250px;
+  height: 100px;
+ }
+
+
   @media only screen and (max-width: 900px) {
 
     .nav-item a{
@@ -218,8 +250,12 @@ canvas#Matrix {
       flex-direction: column;
       padding: 10px;
     }
+    
+    .about-us-video-container{
+      overflow-x: hidden
+    }
 
-       .navbar-brand{
+    .navbar-brand{
       width: 20%;
     }
 
