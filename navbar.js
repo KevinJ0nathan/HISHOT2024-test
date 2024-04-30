@@ -25,5 +25,5 @@ window.addEventListener('scroll', function() {
 
 
 document.getElementById('navbar-toggler').addEventListener('click', function() {
-    document.getElementById('navbar').classList.toggle('collapsed-menu');
+    navbar.style.backgroundColor = 'black';
 });
