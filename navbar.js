@@ -6,7 +6,7 @@ window.addEventListener('scroll', function() {
     var navbar = document.getElementById("navbar")
 
 
-    if (scrollPosition > 100) {
+    if (scrollPosition > 50) {
         navbar.style.backgroundColor = 'black';
     } else {
         navbar.style.backgroundColor = 'transparent';
