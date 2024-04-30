@@ -62,8 +62,8 @@ canvas#Matrix {
     background-image: linear-gradient(to bottom, rgba(217, 217, 217, 0.5) 20%, rgba(115, 115, 115, 0.5) 80%);
 }
 
-#navbar{
-  transition: ease-in 0.5s;
+#navbar {
+  transition: 0.5s ease; 
 }
 
 #navbar.collapsed-menu{
