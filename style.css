@@ -67,7 +67,7 @@ canvas#Matrix {
 }
 
 #navbar.collapsed-menu{
-  background-color: black;
+  background-color: black !important;
 }
 
 .nav-item a{
