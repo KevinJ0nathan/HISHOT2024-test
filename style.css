@@ -44,6 +44,11 @@ canvas#Matrix {
     src: url('Monocode-Regular-V01.02b.ttf') format('truetype');
   }
 
+@font-face {
+  font-family: 'Quantum';
+  src: url('quantum.ttf') format('truetype');
+}
+
   .techy-wires{
     position: absolute;
     right: 0px;
@@ -57,9 +62,12 @@ canvas#Matrix {
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 20px;
     color: white;
     background-color: rgba(217, 217, 217, 0); 
     background-image: linear-gradient(to bottom, rgba(217, 217, 217, 0.5) 20%, rgba(115, 115, 115, 0.5) 80%);
+    position: relative; 
+    overflow: hidden;
 }
 
 #navbar {
@@ -97,8 +105,7 @@ canvas#Matrix {
 
 .login-button-container{
   padding-right: 20px !important;
- 
-
+  justify-content: end;
 }
 
 .navbar-items-container{
@@ -185,12 +192,11 @@ canvas#Matrix {
     transition: 0.3s;
   }
 
-  
-
   .hero-button:hover {
     background-color: rgb(54, 27, 206); 
     transform: scale(1.05);
     border-top-right-radius: 23px;
+    box-shadow: 0 0 20px 1px rgba(54, 27, 206, 0.7); /* Adjust the values as needed */
   }
 
   .navbar-toggler{
@@ -198,8 +204,39 @@ canvas#Matrix {
     border: none;
   }
 
-  .login-button-container{
-    justify-content: end;
+  .login-button:before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    background: linear-gradient(45deg, #48ff00, #00ffd5, #48ff00, #00ffd5, #48ff00, #00ffd5);
+    background-size: 400%;
+    transition: opacity .3s ease-in-out;
+    animation: animate 20s linear infinite;
+  }
+
+  .login-button:hover:before {
+    opacity: 1;
+  }
+
+  .login-button:hover:active {
+    background: none;
+  }
+
+  .login-button:hover:active:before {
+    filter: blur(2px);
+  }
+
+  @keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
   }
 
   .custom-toggler .navbar-toggler-icon {
@@ -224,6 +261,7 @@ canvas#Matrix {
 
   .about-us-header{
     color: #D0E0E6;
+    font-family: 'Quantum';
   }
 
   .about-us-content{
